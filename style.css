@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+.section{
+     position: relative;
+    background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/YrDWL42RZDc8jKWA/banner-wasco-dOqaXZJGP6ILKrgq.webp");
+    background-size: cover;
+    object-fit: cover;
+    height:83%;
+    width:100%;
+    overflow: hidden;
+}
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  .section-3{
+    position: relative;
+  }
+  .section-3::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow:
+  0 1px 3px rgba(0,0,0,0.12),
+  0 4px 6px rgba(0,0,0,0.16);
+
+
+;
+    z-index: 1;
+  }
+  
