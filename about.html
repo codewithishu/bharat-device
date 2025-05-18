@@ -12,12 +12,140 @@ html, body {
   overflow-x: hidden;
 }
 
+@media (min-width: 576px) {
+  
+}
+@media (max-width:722px) {
+.section-page4 input{
+    padding: 8px 22px !important;
+    margin-left: 0px !important;
+
+}
+.section-page4 h1{
+    font-size: 20px !important;
+}
+.page4-p{
+    display: none;
+}
+.section-about4{
+    display: flex;
+    flex-direction: column !important;
+}
+}
+
+
+/* Medium devices (tablets) */
+@media (max-width: 926px) {
+    .navbar{
+        display:none;
+    }
+    .section-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .section-page button{
+        margin-top: -10px !important;
+    }
+    .about-img{
+        height: 30vh;
+        width: 30vw;
+        
+    }
+    .page4-p{
+        display: none;
+    }
+    .about-img-img{
+        margin-top: 100px !important;
+    }
+    .section-page2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px !important;
+    }
+    .section-page2-page{
+        margin-top: 40px;
+    }
+    .section-img{
+        height: 30vh;
+        width: 30vw;
+    }
+    .img-p1{
+        display:none;
+    }
+    .img-p2{
+        display:none;
+    }
+    .section-page3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-img3{
+        height: 30vh;
+        width: 30vw;
+    }
+   .section-about4{
+         display: flex; 
+         flex-direction: column;
+   }
+   .section-page4{
+    display: flex;
+    flex-direction: column;
+   }
+   .section-img4{
+    height: 30vh;
+    width: 30vw;
+   }
+   .section-page5{
+    display: flex;
+    flex-direction: column;
+   }
+   .about-page5{
+    height: 100vh !important;
+
+   }
+
+}
+
+ 
+@media (max-width:1062px) {
+   .section-page p{
+    font-size: 16px !important;
+   }
+   .section-page{
+    left: 0px !important;
+   }
+   .section-img{
+        height: 30vh;
+        width: 30vw;
+    }
+    .section-page2-page{
+        position: relative;
+        left: 0px;
+    }
+    .section-page3-page{
+        position: relative;
+        left: 10px;
+    }
+    .section-page5{
+        gap: 20px;
+    }
+
+
+}
+
 </style>
 <body>
     <div class="about-page1" style="height: 100vh;width: 100vw;">
      <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
            <img style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
-            <div style="  display:  flex;justify-content: flex-end;width: 60%; gap:50px; padding: 20px;">
+            <div style="  display:  flex;justify-content: flex-end;width: 60%; gap:50px; padding: 20px;" class="navbar">
                 <a style="outline: none; color: black; font-size: 20px;" href="index.html">Home</a>
                 <a  style="outline: none;color: black; font-size: 20px;" href="about.html">About</a>
                 <a style="outline: none;color: black;font-size: 20px; " href="products.html">Products</a>
@@ -25,59 +153,59 @@ html, body {
                 <a style="outline: none; color: black; font-size: 20px;" href="contact.html">Contact</a>
             </div>
         </div>
-        <div style="display: flex;justify-content: space-around;">
-            <div style="position: relative;top: 10vh;left: 5%;">
+        <div style="display: flex;justify-content: space-around;" class="section-about">
+            <div class="section-page" style="position: relative;top: 10vh;left: 5%;">
                 <h1 style="font-size: 40px;">Making Custom</br> Kernals For Smart</br> Devices</h1>
                 <p style="line-height: 30px;font-size: 18px;">At Bharat Device, a company dedicated to kernel </br> development, we focus on crafting innovative and efficient </br>solutions to enhance system performance and security. Our </br>work contributes to the advancement of technology with a</br> strong emphasis on reliability and optimization.</p>
-                <button style="padding: 12px 62px;border-radius:25px;font-size: 16px;
+                <button  style="padding: 12px 62px;border-radius:25px;font-size: 16px;
   font-weight: 600;margin-top: 35px;">Explore</button>
             </div>
-            <div style="display: flex;flex-direction: column;margin-top: 40px;">
-                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=855,fit=crop/YrDWL42RZDc8jKWA/images-1--picsart-aiimageenhancer-m7V3E9JMgNuo27Kv.jpeg" alt="">
+            <div class="about-img-img" style="display: flex;flex-direction: column;margin-top: 40px;">
+                <img class="about-img"  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=855,fit=crop/YrDWL42RZDc8jKWA/images-1--picsart-aiimageenhancer-m7V3E9JMgNuo27Kv.jpeg" alt="">
                 <div style="display: flex;justify-content: space-around;background-color:#1D4E89; position: relative;right: 50px; padding: 22px 42px;top: -30px;" >
                     <div style="color: #fff;">
                         <h1>150+</h1>
-                        <p>Made in India</p>
+                        <p class="img-p1">Made in India</p>
                     </div>
                     <div style="color: #fff;">
                         <h1>15</h1>
-                        <p>Innovative Solutions</p>
+                        <p class="img-p2">Innovative Solutions</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="about-page2" style="padding: 120px 120px;">
-        <div style="display: flex;justify-content: space-around;gap: 20px;">
-        <div style="display: flex;flex-direction: column;">
+        <div class="section-page2" style="display: flex;justify-content: space-around;gap: 20px;">
+        <div class="section-page2-page" style="display: flex;flex-direction: column;">
             <h1>Innovative Solutions</h1>
             <p style="font-size: 18px;">Showcasing cutting-edge technology and software </br>solutions made in India.</p>
-            <img  style="margin-top: 20px;"src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=511,fit=crop/YrDWL42RZDc8jKWA/oip-1--picsart-aiimageenhancer-mP4OXW0VoWT0zpP9.jpeg" alt="">
+            <img class="section-img" style="margin-top: 20px;"src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=511,fit=crop/YrDWL42RZDc8jKWA/oip-1--picsart-aiimageenhancer-mP4OXW0VoWT0zpP9.jpeg" alt="">
         </div>
-        <div style="margin-top: 20%;">
+        <div  style="margin-top: 20%;">
             <h1>Tech Innovations</h1>
             <p style="font-size: 18px;" >Explore our diverse range of innovative gadgets and software </br>solutions that highlight the best of Indian technology and</br> creativity in the tech industry.</p>
         </div>
     </div>
     </div>
     <div class="about-page3" style="padding: 70px 120px;margin-top: -80px;">
-        <div style="display: flex;justify-content: space-around;">
+        <div class="section-page3" style="display: flex;justify-content: space-around;">
         <div>
-            <img  style="height: 40vh;width: 40vw;"src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=511,fit=crop/YrDWL42RZDc8jKWA/oip-3--picsart-aiimageenhancer-Y4LDE9Zea3TO7XP2.jpeg" alt="">
+            <img class="section-img3" style="height: 40vh;width: 40vw;"src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=511,fit=crop/YrDWL42RZDc8jKWA/oip-3--picsart-aiimageenhancer-Y4LDE9Zea3TO7XP2.jpeg" alt="">
         </div>
-        <div>
+        <div class="section-page3-page">
             <h1>Our Mission</h1>
             <p style="margin-top: 10px;font-size: 18px;">Dedicated to promoting Indian technology, fostering </br>innovation, and supporting local talent in the tech sector</br> through our platform.</p>
         </div>
     </div>
     </div>
     <div class="about-page4" style="padding: 70px 120px;">
-        <div style="display: flex;justify-content: space-around;">
+        <div class="section-about4" style="display: flex;justify-content: space-around;">
             <div style="position: relative;top: 10vh;">
                 <h1 style="font-size: 30px;">Contact Us</h1>
-                <p style="font-size: 18px;">Reach out to Bharat Device for inquiries about </br> innovative technology and our latest offerings.</p>
+                <p class="page4-p" style="font-size: 18px;">Reach out to Bharat Device for inquiries about </br> innovative technology and our latest offerings.</p>
             </div>
-            <div style="display: flex;justify-content: flex-start;gap: 10px;flex-direction: column;z-index: 2;background-color: #fff;">
+            <div class="section-page4" style="display: flex;justify-content: flex-start;gap: 10px;flex-direction: column;z-index: 2;background-color: #fff;">
                 <p>Your First Name</p>
                 <input  style="padding: 12px 152px;"type="text" placeholder="Enter Your First Name">
                 <p>Your Email Address*</p>
@@ -91,11 +219,11 @@ html, body {
     </div>
             </div>
         </div>
-        <img  style="height: 50vh;width: 70vw; position: relative;top: -55px;"src="https://images.unsplash.com/photo-1538652370726-3ef1b70ff9f7?auto=format&fit=crop&w=2222&h=768" alt="">
+        <img class="section-img4" style="height: 50vh;width: 70vw; position: relative;top: -55px;"src="https://images.unsplash.com/photo-1538652370726-3ef1b70ff9f7?auto=format&fit=crop&w=2222&h=768" alt="">
     </div>
 
     <div class="about-page5" style="height: 50vh;width: 100vw;background-color:#102A43; margin-top:-45px; padding: 32px 32px;color: #fff;position: relative;">
-    <div style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
+    <div class="section-page5" style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
     <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Innovate</h1>
         <p>Showcasing India's tech, gadgets, and </br>solutions.</p>

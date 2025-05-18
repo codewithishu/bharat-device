@@ -7,9 +7,6 @@
 html, body {
   overflow-x: hidden;
 }
-
-
-
 .section{
      position: relative;
     background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/YrDWL42RZDc8jKWA/banner-wasco-dOqaXZJGP6ILKrgq.webp");
@@ -36,9 +33,6 @@ html, body {
     box-shadow:
   0 1px 3px rgba(0,0,0,0.12),
   0 4px 6px rgba(0,0,0,0.16);
-
-
-;
     z-index: 1;
   }
   
