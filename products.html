@@ -17,17 +17,7 @@
     overflow-x: hidden;
   }
 
-  .hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  .hamburger i {
-    padding: 5px;
-    transition: all 0.3s ease;
-  }
+  
 
 
   @media (max-width:768px) {
@@ -55,30 +45,9 @@
       font-size: 18px;
     }
 
-    .hamburger {
-      display: block;
-    }
-    .close-icon{
-      display: block;
-    }
+    
 
-    .nav-container {
-      display: none !important;
-      /* hide by default on mobile */
-      flex-direction: column !important;
-      width: 100% !important;
-      background-color: #fff;
-      position: absolute;
-      top: 70px;
-      /* adjust if header height changes */
-      left: 0;
-      padding: 20px !important;
-      z-index: 99;
-    }
-
-    .nav-container.show {
-      display: flex !important;
-    }
+    
     
 
     .product-page1 {
@@ -198,17 +167,7 @@
       <img style="height:15%; width: 15%; text-align: center;margin-top: 15px;"
         src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
 
-      <div class="hamburger" onclick="toggleMenu()">
-        <!-- Open Icon -->
-        
-          <i class="fas fa-bars fa-xl open-icon" style="display: inline;"></i>
-        
-
-        <!-- Close Icon -->
-        
-         <i class="fa-solid fa-xmark close-icon" style="display: none;"></i>
-       
-      </div>
+      
 
       <div class="nav-container"
         style="  display:  flex;justify-content: flex-end;width: 60%; gap:50px; padding: 20px;">
@@ -315,21 +274,7 @@
     </div>
   </div>
 
- <script>
-function toggleMenu() {
-  const nav = document.querySelector('.nav-container');
-  const hamburger = document.querySelector('.hamburger');
-  const openIcon = hamburger.querySelector('.open-icon');
-  const closeIcon = hamburger.querySelector('.close-icon');
-
-  nav.classList.toggle('show');
-
-  const isOpen = nav.classList.contains('show');
-  openIcon.style.display = isOpen ? 'none' : 'inline';
-  closeIcon.style.display = isOpen ? 'inline' : 'none';
-}
-</script>
-
+ 
 
 </body>
 
