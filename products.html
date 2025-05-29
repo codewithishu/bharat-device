@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>products</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <style>
@@ -16,39 +14,119 @@
   body {
     overflow-x: hidden;
   }
+  .header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e7f5ff;
+}
+.header .logo {
+  height: 3rem;
+  width: 3rem;
+}
+  .navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
 
-  
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #212529;
+  transition: all 0.3s;
+}
 
+.navbar-link:hover,
+.navbar-link:active {
+  color: #364fc7;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
 
   @media (max-width:768px) {
+     .header .logo {
+    width: 40%;
+  }
+    .mobile-navbar-btn {
+      margin-top: 2px;
+     margin-right: 100px !important;
+    display: block;
+    z-index: 999;
+    border: 3px solid #212529;
+    color: #212529;
+  }
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background: #e7f5ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the tranisition  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .active .navbar {
+    transform: translateX(-20%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
     .header {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+    position: relative;
+    z-index: 2;
+  }
 
-    .header img {
-      width: 50%;
-      height: auto;
-      margin-top: 10px;
-    }
-
-    .header div {
-      flex-direction: column;
-      width: 100%;
-      padding: 10px;
-      gap: 20px;
-      align-items: center;
-    }
+   
 
     .header a {
       font-size: 18px;
     }
-
-    
-
-    
-    
 
     .product-page1 {
       width: 30vw;
@@ -56,8 +134,11 @@
 
     .product-page1>div:nth-of-type(2) {
       padding: 12px 10px;
-      width: 80vw;
-      margin-top: 40px !important;
+      width: 80vw !important;
+      position: relative;
+      right: 30px !important;
+     font-size: 30px !important;
+      margin-top: 30px !important;
     }
 
     /* Main content flex container */
@@ -66,17 +147,22 @@
       align-items: center;
       padding: 12px 20px !important;
     }
-
+    .logo{
+      width: 50vw !important;
+    }
     /* Each product block */
     .product-page1>div:nth-of-type(3)>div {
       width: 70vw !important;
       text-align: center;
+      position: relative;
+      right: 40px !important;
+      margin-top: 100px !important;
     }
 
     /* Responsive images */
     .product-page1 img {
-      width: 60vw !important;
-      height: auto !important;
+      width: 50vw !important;
+      
     }
 
     /* Headings inside cards */
@@ -88,7 +174,10 @@
       font-size: 16px !important;
     }
 
-
+   .star{
+    position: relative;
+    right: 35px !important;
+   }
     div[style*="background-color: #1D4E89"] {
       padding: 20px;
       text-align: center;
@@ -143,7 +232,9 @@
       width: 50vw !important;
 
     }
-
+   .colony{
+    width: 70vw !important;
+   }
     .product-page2 img {
       height: 30vh !important;
       width: 30wv !important;
@@ -158,27 +249,47 @@
       display: inline-block !important;
     }
   }
+   @media (max-width: 35em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .header .logo{
+    width: 60vw;
+    
+  }
+}
 </style>
 
 <body>
   <div class="product-page1" style="height: 100vh; width: 100vw; padding: 12px 32px;">
-    <div class="header"
-      style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;">
-      <img style="height:15%; width: 15%; text-align: center;margin-top: 15px;"
-        src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
+     <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
+           <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
+            
+           <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="index.html">Home</a></li>
+          <li><a class="navbar-link" href="about.html">About</a></li>
+          <li><a class="navbar-link" href="products.html">Products</a></li>
+          <li><a class="navbar-link" href="blog.html">Blog</a></li>
+          <li>
+            <a
+              class="navbar-link"
+              href="contact.html"
+              target="_blank"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-      
-
-      <div class="nav-container"
-        style="  display:  flex;justify-content: flex-end;width: 60%; gap:50px; padding: 20px;">
-        <a style="outline: none; color: black; font-size: 20px;" href="index.html">Home</a>
-        <a style="outline: none;color: black; font-size: 20px;" href="about.html">About</a>
-        <a style="outline: none;color: black;font-size: 20px; " href="products.html">Products</a>
-        <a style="outline: none; color: black;font-size: 20px;" href="blog.html">Blog</a>
-        <a style="outline: none; color: black; font-size: 20px;" href="contact.html">Contact</a>
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
       </div>
-    </div>
-    <div style="margin-top: 70px;">
+
+        </div>
+    <div class="nav-page" style="margin-top: 70px;">
       <h1 style="text-align: center;font-size: 50px;">Innovative Technology Solutions</h1>
       <p style="text-align: center;font-size: 18px;">Showcasing the best Indian technology, gadgets, and software
         solutions </br> for modern businesses.</p>
@@ -240,7 +351,7 @@
       </div>
     </div>
   </div>
-  <div
+  <div class="star"
     style="height: 60vh;width: 100vw;background-color: #1D4E89;margin-top: 20px; display: flex;flex-direction: column;justify-content: center;align-items: center;color: #fff;">
     <p style="font-size: 30px;">★★★★★</p>
     <p style="font-size: 18px;">Bharat Device showcases the best of Indian innovation.</br> Their products are
@@ -260,7 +371,7 @@
       </div>
       <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Connect</h1>
-        <p>2/49 DEFENCE COLONY KANKARBAGH </br> PATNA-800020</p>
+        <p class="colony">2/49 DEFENCE COLONY KANKARBAGH </br> PATNA-800020</p>
         <p>hr@bharatdevice.com</p>
       </div>
       <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
@@ -273,9 +384,15 @@
       </div>
     </div>
   </div>
-
- 
-
 </body>
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
 
 </html>

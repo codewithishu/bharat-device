@@ -11,35 +11,125 @@
 html, body {
   overflow-x: hidden;
 }
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e7f5ff;
+}
+.header .logo {
+  height: 3rem;
+  width: 3rem;
+}
+  .navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #212529;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: #364fc7;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
 
  @media (max-width: 768px) {
+  .header .logo {
+    width: 30vw;
+  }
+    .mobile-navbar-btn {
+      margin-top: 2px;
+     margin-right: 50px !important;
+    display: block;
+    z-index: 999;
+    border: 3px solid #212529;
+    color: #212529;
+  }
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background: #e7f5ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the tranisition  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+    .header {
+    position: relative;
+    z-index: 2;
+  }
+
+  
     .contact-page1 {
       display: flex;
       flex-direction: column;
     }
 
     
-    .header {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 10px !important;
-    gap: 10px !important;
-  }
+   
 
-  .header img {
-    width: 40vw !important;
-    height: auto !important;
-    margin-top: 10px !important;
-    margin-left: 0px !important;
-  }
-
-  .header div {
-    flex-direction: column !important;
-    width: 60vw !important;
-    align-items: center !important;
-    gap: 15px !important;
-    padding: 10px !important;
-  }
+  
+  
 
     .header a {
       font-size: 18px;
@@ -58,15 +148,17 @@ html, body {
 
   .contact-page1 h1 {
     font-size: 38px !important;
+    margin-bottom: 40px !important;
   }
 
   .contact-page1 p {
-    font-size: 16px !important;
-    line-height: 24px !important;
+    font-size: 18px !important;
+    line-height: 26px !important;
+    width: 70vw !important;
   }
 
   .contact-page1 img {
-    width: 80vw !important;
+    width: 40vw !important;
     height: auto !important;
     margin-top: 20px !important;
     margin-right: 0 !important;
@@ -79,7 +171,7 @@ html, body {
     }
 
     .contact-page2 iframe {
-      width: 100vw !important;
+      width: 80vw !important;
       height: 300px !important;
       margin-top: 30px !important;
     }
@@ -110,29 +202,53 @@ html, body {
   }
 
   .blog-page3 p[style*="position: absolute"] {
-    position: static !important;
+   
     margin-top: 20px;
     text-align: center;
     left: auto !important;
-    bottom: auto !important;
+    
+    margin-bottom: -30px !important;
   }
   }
+   @media (max-width: 35em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .header .logo{
+    width: 60vw;
+    font-size: 130px;
+  }
+}
 
 </style>
 
 <body>
     <div class="contact-page1" style="height: 100vh;width: 100vw;">
-     <div class="header"
-            style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;">
-            <img style="height:15%; width: 15%; text-align: center;margin-top: 15px;"
-                src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
-            <div style="  display:  flex;justify-content: flex-end;width: 60%; gap:50px; padding: 20px;">
-                <a style="outline: none; color: black; font-size: 20px;" href="index.html">Home</a>
-                <a style="outline: none;color: black; font-size: 20px;" href="about.html">About</a>
-                <a style="outline: none;color: black;font-size: 20px; " href="products.html">Products</a>
-                <a style="outline: none; color: black;font-size: 20px;" href="blog.html">Blog</a>
-                <a style="outline: none; color: black; font-size: 20px;" href="contact.html">Contact</a>
-            </div>
+     <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
+           <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
+            
+           <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="index.html">Home</a></li>
+          <li><a class="navbar-link" href="about.html">About</a></li>
+          <li><a class="navbar-link" href="products.html">Products</a></li>
+          <li><a class="navbar-link" href="blog.html">Blog</a></li>
+          <li>
+            <a
+              class="navbar-link"
+              href="contact.html"
+              target="_blank"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </div>
 
         </div>
         <div style="display: flex;justify-content: space-around;margin-top: 2%;padding: 12px 32px;">
@@ -176,9 +292,18 @@ html, body {
         <input style="padding: 12px 32px;border-radius: 10px;" type="email" placeholder="Your email for updates">
         <button style="padding: 12px 22px;background-color: rgb(101, 101, 222);border-radius:25px;font-size: 16px;
   font-weight: 600;">Subscrible for latest updates</button>
-  <p style="position: absolute;bottom: 30px;left: 150px;">© 2025. All rights reserved.</p>
+  <p style="position: absolute;bottom: 50px;left: 150px;">© 2025. All rights reserved.</p>
     </div>
 </div>
     </div>
 </body>
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
 </html>
