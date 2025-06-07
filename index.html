@@ -9,17 +9,20 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .header {
-  padding: 0 4.8rem;
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e7f5ff;
-}
-.header .logo {
-  height: 3rem;
-  width: 3rem;
-}
+      position:fixed;
+      top: 0;
+      z-index: 100;
+      background-color: #e7f5ff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .header img {
+      height: 50px;
+    }
   .navbar-list {
   display: flex;
   gap: 4.8rem;
@@ -31,7 +34,7 @@
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: 500;
   color: #212529;
   transition: all 0.3s;
@@ -56,6 +59,9 @@
 
 .mobile-nav-icon[name="close-outline"] {
   display: none;
+}
+.page2 > div > div p{
+  font-size: 18px;
 }
   
     @media (max-width:768px) {
@@ -154,6 +160,9 @@
     font-size: 14px !important;
     margin-top: 15px !important;
   }
+  .page2{
+    margin-top: -260px;
+  }
   .page2 h1 {
     font-size: 32px !important;
     text-align: center !important;
@@ -177,12 +186,13 @@
   }
 
   .page2 > div > div p {
-    font-size: 14px !important;
+    font-size: 18px !important;
     line-height: 24px !important;
     text-align: justify !important;
   }
   .page3 {
     padding: 20px 0 !important;
+    margin-top: 150px;
   }
 
   .page3 .section-3 {
@@ -202,6 +212,7 @@
   }
   .page4 {
     padding: 20px 10px !important;
+    margin-top: -150px;
   }
 
   .page4 h1 {
@@ -209,7 +220,8 @@
   }
 
   .page4 p {
-    font-size: 14px !important;
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
   }
 
   .page4 > div:nth-child(3) {
@@ -225,8 +237,9 @@
   }
 
   .page4 img {
-    width: 100% !important;
+    width: 90vw!important;
     height: auto !important;
+    margin-left: -20px !important;
   }
 
   .page4 > div:nth-child(3) > div > div:nth-child(2) {
@@ -304,7 +317,7 @@
 
 <body>
     <div class="page1" style="height: 100vh ; width: 100vw; margin-top: -10px; margin-left: -8px;" >
-        <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
+        <div class="header" style=" padding: 15px;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
            <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
             
            <nav class="navbar">
@@ -341,15 +354,15 @@
         </div>
     </div>
     <div class="page2" style="height: 100vh;width: 100vw;padding: 25px 22px ;">
-        <h1 style="font-size:60px;text-align: center;">Empowering Indian Technology and Innovation</h1>
+        <h1 id="main-heading" style="font-size:60px;text-align: center;">Empowering Indian Technology and Innovation</h1>
         <div style="display: flex;gap:150px; padding: 12px 22px;flex-wrap: nowrap;margin-left: 40px;">
             <div style="width: 40%;">
-                <h1 style="font-size: 70px;">Our Mission and Vision</h1>
-                <p style="line-height:30px;font-size: 15px;">At Bharat Device, we specialize in developing high-performance kernels for embedded systems, ensuring seamless operation for smart devices such as smoke detectors, leakage sensors, and IoT-enabled solutions. Our cutting-edge technology powers the next generation of intelligent systems, delivering reliability, security, and efficiency.</p>
+                <h1 id="mission-heading" style="font-size: 70px;">Our Mission and Vision</h1>
+                <p id="mission-text" style="line-height:30px;font-size: 15px;">At Bharat Device, we specialize in developing high-performance kernels for embedded systems, ensuring seamless operation for smart devices such as smoke detectors, leakage sensors, and IoT-enabled solutions. Our cutting-edge technology powers the next generation of intelligent systems, delivering reliability, security, and efficiency.</p>
             </div>
             <div style="width: 40%;">
-                <h1 style="font-size: 70px;">Why Choose Bharat Device?</h1>
-                <p style="line-height: 30px;font-size: 15px;">
+                <h1 id="why-heading" style="font-size: 70px;">Why Choose Bharat Device?</h1>
+                <p id="why-text" style="line-height: 30px;font-size: 15px;">
                     Optimized Kernel Development – Our lightweight, high-speed kernels enhance device performance while minimizing power consumption. <br>
 
                     Industry-Ready Solutions – Designed for real-world applications, our technology meets the rigorous demands of modern industries.<br>
@@ -369,10 +382,10 @@
 </div>
 <div class="page4" style="width: 100vw; min-height: 70vh;background-color: rgb(210, 238, 209);margin-top: -1%;position: relative;padding: 42px 42px;z-index: 2;">
    
-    <h1 style="text-align: center;font-size: 50px;">Innovative Solutions</h1>
-    <p style="text-align: center; font-size: 17px;"> Showcasing cutting-edge technology and software solutions crafted in India </br> for modern businesses.</p>
+    <h1 id="page4-title" style="text-align: center;font-size: 50px;">Innovative Solutions</h1>
+    <p id="page4-subtitle"style="text-align: center; font-size: 17px;"> Showcasing cutting-edge technology and software solutions crafted in India </br> for modern businesses.</p>
     <div style="display:flex ;justify-content: center;align-items: center;margin-right: 145px;margin-top: 40px;">
-        <div style="display: flex;flex-direction: column; width: 40vw; position: relative;left: 100px;" >
+        <div id="card1" style="display: flex;flex-direction: column; width: 40vw; position: relative;left: 100px;" >
             <div >
                 <img style="width: 80%; height: 80%; box-shadow:
   0 1px 3px rgba(0,0,0,0.12),
@@ -387,7 +400,7 @@
                 <p>Gas Leakage Sensor Kernal</p>
             </div>
         </div>
-        <div style="display: flex;flex-direction: column; width: 40vw;position: relative;left: 50px;" >
+        <div id="card2"  style="display: flex;flex-direction: column; width: 40vw;position: relative;left: 50px;" >
             <div>
                 <img  style="width: 80%; height: 50%;box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 
@@ -407,10 +420,10 @@
     
 </div>
 <div class="page5" style="padding: 62px 120px; height: 60vh;width: 100vw; padding-bottom: 150px;">
-    <h1 style="text-align: center;font-size: 50px;">Our Customers</h1>
-    <p style="text-align: center;font-size: 18px;margin-top: 20px;">Discover what our clients say about Bharat </br> Device's innovative solutions.</p>
-    <div style="display: flex; gap: 120px; justify-content:space-between; padding: 32px 32px ; margin-top: 60px;">
-        <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+    <h1  id="page5-title" style="text-align: center;font-size: 50px;">Our Customers</h1>
+    <p id="page5-subtitle" style="text-align: center;font-size: 18px;margin-top: 20px;">Discover what our clients say about Bharat </br> Device's innovative solutions.</p>
+    <div id="customers-container" style="display: flex; gap: 120px; justify-content:space-between; padding: 32px 32px ; margin-top: 60px;">
+        <div class="customer-card" style="display: flex; flex-direction: column; justify-content: flex-end;">
             <div><p>Written Custom Kernal For Small Devices</p></div>
             <div style="display: flex;gap: 2px; margin-top: 80px;">
                 <img  style=" height:60px;width:60px;border-radius: 50%;" src="https://images.unsplash.com/photo-1554243572-5d5208a48e04?auto=format&fit=crop&w=96&h=96" alt="">
@@ -420,7 +433,7 @@
                 </div>
             </div>
         </div>
-        <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+        <div class="customer-card" style="display: flex; flex-direction: column; justify-content: flex-end;">
             <div><p>Custom IOT Farming Device Kernals for Aquaponics Systems </p></div>
             <div style="display: flex;gap: 2px; margin-top: 80px;">
               <img   style=" height:60px;width:60px;border-radius: 50%;" src="https://images.unsplash.com/photo-1671072012624-c2089f89753f?auto=format&fit=crop&w=96&h=96" alt="">
@@ -433,27 +446,32 @@
     </div>
 </div>
 <div class="page6" style="height: 50vh;width: 100vw;background-color:#102A43; margin-top: 40px; padding: 32px 32px;color: #fff;position: relative;">
-    <div style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+    <div class="footer-container" style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
+    <div class="footer-block" style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Innovate</h1>
         <p>Showcasing India's tech, gadgets, and </br>solutions.</p>
     </div>
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+    <div class="footer-block" style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Connect</h1>
         <p>2/49 DEFENCE COLONY KANKARBAGH </br> PATNA-800020</p>
         <p>hr@bharatdevice.com</p>
     </div>
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+    <div class="footer-block" style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+       <div class="animate-content">
         <h1>Explore</h1>
         <p>Enter your email address</p>
-        <input style="padding: 12px 32px;border-radius: 10px;" type="email" placeholder="Your email for updates">
-        <button style="padding: 12px 22px;background-color: rgb(101, 101, 222);border-radius:25px;font-size: 16px;
+        <input id="emailInput"style="padding: 12px 32px;border-radius: 10px;margin: top 20px;" type="email" placeholder="Your email for updates">
+        <button onclick="subscribe()" style=" margin-top:20px; padding: 12px 22px;background-color: rgb(101, 101, 222);border-radius:25px;font-size: 16px;
   font-weight: 600;">Subscrible for latest updates</button>
-  <p style="position: absolute;bottom: 30px;left: 150px;">© 2025. All rights reserved.</p>
+  </div>
+  <p style="position: absolute;bottom: -60px;left: 150px;">© 2025. All rights reserved.</p>
     </div>
 </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
  <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -463,4 +481,232 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="index.js"></script>
+
+    <script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate h1
+  gsap.from(".section h1", {
+    scrollTrigger: {
+      trigger: ".section",
+      start: "top 80%",
+    },
+    y: -60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  // Animate paragraphs
+  gsap.from(".section p", {
+    scrollTrigger: {
+      trigger: ".section",
+      start: "top 80%",
+    },
+    y: -40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // Animate button
+  gsap.from(".section button", {
+    scrollTrigger: {
+      trigger: ".section",
+      start: "top 80%",
+    },
+    y: -30,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.5,
+    ease: "power2.out"
+  });
+
+  gsap.from("#main-heading", {
+    scrollTrigger: {
+      trigger: "#main-heading",
+      start: "top 80%", // when top of element hits 80% of viewport
+      toggleActions: "play none none none"
+    },
+    y: -60,
+    opacity: 0,
+    duration: 3,
+    ease: "power3.out"
+  });
+
+  gsap.from("#mission-heading", {
+    scrollTrigger: {
+      trigger: "#mission-heading",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    y: -50,
+    opacity: 0,
+    duration: 2,
+    ease: "power3.out"
+  });
+
+  gsap.from("#mission-text", {
+    scrollTrigger: {
+      trigger: "#mission-text",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -40,
+    opacity: 0,
+    duration: 2,
+    ease: "power3.out"
+  });
+
+  gsap.from("#why-heading", {
+    scrollTrigger: {
+      trigger: "#why-heading",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    y: -50,
+    opacity: 0,
+    duration: 2,
+    ease: "power3.out"
+  });
+
+  gsap.from("#why-text", {
+    scrollTrigger: {
+      trigger: "#why-text",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -40,
+    opacity: 0,
+    duration: 2,
+    ease: "power3.out"
+  });
+ gsap.from(".section-3", {
+  scrollTrigger: {
+    trigger: ".page3",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  y: -70,
+  opacity: 0,
+  duration: 1.3,
+  ease: "power4.out",
+});
+   gsap.from("#page4-title", {
+    scrollTrigger: {
+      trigger: "#page4-title",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    y: -40,
+    opacity: 0,
+    duration: 1,
+    ease: "power4.out"
+  });
+
+  // Animate subtitle below heading
+  gsap.from("#page4-subtitle", {
+    scrollTrigger: {
+      trigger: "#page4-subtitle",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -20,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out"
+  });
+
+  // Animate card1 and card2 elegantly
+  gsap.from(["#card1", "#card2"], {
+    scrollTrigger: {
+      trigger: "#card1",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -80,
+    opacity: 0,
+    duration: 1.3,
+    ease: "power4.out",
+    stagger: 0.3
+  });
+
+   gsap.from("#page5-title", {
+    scrollTrigger: {
+      trigger: "#page5-title",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    y: -40,
+    opacity: 0,
+    duration: 1,
+    ease: "power4.out"
+  });
+
+  // Animate subtitle
+  gsap.from("#page5-subtitle", {
+    scrollTrigger: {
+      trigger: "#page5-subtitle",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -20,
+    opacity: 0,
+    duration: 1.2,
+    delay: 0.2,
+    ease: "power4.out"
+  });
+
+  // Animate customer cards
+  gsap.from(".customer-card", {
+    scrollTrigger: {
+      trigger: "#customers-container",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    y: -80,
+    opacity: 0,
+    duration: 1.3,
+    stagger: 0.3,
+    ease: "power4.out"
+  });
+  gsap.from(".page6", {
+  scrollTrigger: {
+    trigger: ".page6",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  y: -80,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power4.out"
+});
+
+// Animate each inner block with slight delay
+gsap.from(".page6 div > div", {
+  scrollTrigger: {
+    trigger: ".page6",
+    start: "top 85%",
+  },
+  y: -60,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.2
+});
+  gsap.from(".animate-content", {
+    scrollTrigger: {
+      trigger: ".page6",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    y: -70,       // ✨ From upwards
+    opacity: 0,
+    duration: 1.3,
+    ease: "power4.out",
+    stagger: 0.3  // ✨ Animate blocks one after another
+  });
+  </script>
+
 </html>

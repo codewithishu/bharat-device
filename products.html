@@ -10,22 +10,25 @@
 </head>
 
 <style>
-  html,
+  
   body {
     overflow-x: hidden;
   }
   .header {
-  padding: 0 4.8rem;
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e7f5ff;
-}
-.header .logo {
-  height: 3rem;
-  width: 3rem;
-}
+      position:fixed;
+      top: 0;
+      z-index: 100;
+      background-color: #e7f5ff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .header img {
+      height: 50px;
+    }
   .navbar-list {
   display: flex;
   gap: 4.8rem;
@@ -37,7 +40,7 @@
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: 500;
   color: #212529;
   transition: all 0.3s;
@@ -120,6 +123,7 @@
     .header {
     position: relative;
     z-index: 2;
+    margin-top: -70px;
   }
 
    
@@ -130,6 +134,7 @@
 
     .product-page1 {
       width: 30vw;
+      
     }
 
     .product-page1>div:nth-of-type(2) {
@@ -138,7 +143,7 @@
       position: relative;
       right: 30px !important;
      font-size: 30px !important;
-      margin-top: 30px !important;
+      margin-top: -20px !important;
     }
 
     /* Main content flex container */
@@ -146,6 +151,7 @@
       flex-direction: column !important;
       align-items: center;
       padding: 12px 20px !important;
+      margin-top: -100px !important;
     }
     .logo{
       width: 50vw !important;
@@ -153,6 +159,7 @@
     /* Each product block */
     .product-page1>div:nth-of-type(3)>div {
       width: 70vw !important;
+      height: 38vh !important;
       text-align: center;
       position: relative;
       right: 40px !important;
@@ -162,18 +169,20 @@
     /* Responsive images */
     .product-page1 img {
       width: 50vw !important;
+      height: 15vh !important;
       
     }
 
     /* Headings inside cards */
     .product-page1 h1 {
-      font-size: 28px !important;
+      font-size: 26px !important;
     }
 
     .product-page1 p {
       font-size: 16px !important;
+      margin-top: -10px;
     }
-
+   
    .star{
     position: relative;
     right: 35px !important;
@@ -198,6 +207,9 @@
 
     .products-page3 {
       height: 110vh !important;
+      margin-top: 0px !important;
+      width: 100vw;
+      margin-left: -10px !important;
     }
 
     .products-page3>div {
@@ -225,29 +237,59 @@
     }
 
     .product-page2-div {
-      display: none;
+      margin-top: 150px;
     }
 
     .product-page2 {
       width: 50vw !important;
 
+
     }
    .colony{
     width: 70vw !important;
    }
-    .product-page2 img {
-      height: 30vh !important;
-      width: 30wv !important;
-      margin-top: 180px !important;
-      display: none;
-    }
+   .product-page2 {
+    
+    
+    margin-top: 80px;
+  }
 
-    .product-page2-img {
-      height: 30vh !important;
-      width: 30wv !important;
-      margin-top: 180px !important;
-      display: inline-block !important;
-    }
+  .product-page2-img {
+    flex-direction: row;
+    
+    
+    
+  }
+
+  .product-page2-img img,
+  .product-page2-img2 img,
+  .product-page2-img3 img,
+  .product-page2-img4,
+  .product-page2-img5 {
+    width: 30vw !important;
+    height: 25vh !important;
+    margin-right: 250px !important;
+  }
+
+  .product-page2-img3 {
+    display: flex;
+  
+    height: 30vh !important;
+    width: 40vw !important;
+  }
+
+  
+
+  .product-page2-div h1 {
+    font-size: 28px;
+    margin-left: 30px !important;
+  }
+
+  .product-page2-div p {
+    font-size: 22px !important;
+    margin-left: 40px !important;
+  }
+  
   }
    @media (max-width: 35em) {
   .header {
@@ -263,7 +305,7 @@
 
 <body>
   <div class="product-page1" style="height: 100vh; width: 100vw; padding: 12px 32px;">
-     <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
+     <div class="header" style="padding: 15px;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
            <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
             
            <nav class="navbar">
@@ -318,33 +360,33 @@
       <h1 style="text-align: center;font-size: 40px;">Innovations</h1>
       <p style="text-align: center;font-size: 18px;"> Showcasing cutting-edge technology and gadgets made in India.</p>
     </div>
-    <div style="display: flex; padding: 12px 62px;gap: 10px;">
+    <div class="product-page2-img" style="display: flex; padding: 12px 62px;gap: 10px;">
       <div style="display: flex;flex-direction: column;">
         <div class="product-page2-img">
           <img style="height: 40vh;width: 20vw;"
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=640,fit=crop/YrDWL42RZDc8jKWA/smoke_and_fire_detector-picsart-aiimageenhancer-m7V3ED6jMrSqpbXz.jpeg"
             alt="">
         </div>
-        <div>
+        <div class="product-page2-img2" >
           <img style="height: 40vh;width: 20vw;"
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=640,fit=crop/YrDWL42RZDc8jKWA/refregerator_leak_detector-picsart-aiimageenhancer-mePx3g4PpyFbwpVR.jpeg"
             alt="">
         </div>
 
       </div>
-      <div>
-        <img style="height: 80vh;width: 40vw;"
+      <div class="product-page2-img3">
+        <img class="big-img" style="height: 80vh;width: 40vw;"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=861,h=932,fit=crop/YrDWL42RZDc8jKWA/airquality_monitor-YNqBXMe4M6So77nn.jpeg"
           alt="">
       </div>
       <div style="display: flex;flex-direction: column;">
         <div>
-          <img style="height:40vh ;width: 20vw;"
+          <img class="product-page2-img4" style="height:40vh ;width: 20vw;"
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=640,fit=crop/YrDWL42RZDc8jKWA/alcohol_analyser-picsart-aiimageenhancer-YbNBD4Q5gaIwqBV7.jpeg"
             alt="">
         </div>
         <div>
-          <img style="height: 40vh;width: 20vw;"
+          <img class="product-page2-img5" style="height: 40vh;width: 20vw;"
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=640,fit=crop/YrDWL42RZDc8jKWA/gas_leak_detector-picsart-aiimageenhancer-Aq2W0G32PQtpr1jX.jpeg"
             alt="">
         </div>
@@ -353,34 +395,34 @@
   </div>
   <div class="star"
     style="height: 60vh;width: 100vw;background-color: #1D4E89;margin-top: 20px; display: flex;flex-direction: column;justify-content: center;align-items: center;color: #fff;">
-    <p style="font-size: 30px;">★★★★★</p>
-    <p style="font-size: 18px;">Bharat Device showcases the best of Indian innovation.</br> Their products are
+    <p  id="star-rating" style="font-size: 30px;">★★★★★</p>
+    <p id="star-text" style="font-size: 18px;">Bharat Device showcases the best of Indian innovation.</br> Their products are
       top-notch, and the website is user- </br>friendly. Highly recommend for anyone seeking quality tech
       </br>solutions!</p>
-    <img style="height: 60px;width: 60px;border-radius: 50%;"
+    <img id="star-img" style="height: 60px;width: 60px;border-radius: 50%;"
       src="https://images.unsplash.com/photo-1610018576043-968b9b6a816e?auto=format&fit=crop&w=96&h=96" alt="">
-    <p style="font-size: 18px;">Rajesh Kumar</p>
+    <p id="star-name" style="font-size: 18px;">Rajesh Kumar</p>
   </div>
 
   <div class="products-page3"
     style="height: 50vh;width: 100vw;background-color:#102A43; margin-top:-45px; padding: 32px 32px;color: #fff;position: relative;">
-    <div style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
-      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+    <div  class="products-container" style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
+      <div class="innovate" style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Innovate</h1>
         <p>Showcasing India's tech, gadgets, and </br>solutions.</p>
       </div>
-      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+      <div class="connect"  style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Connect</h1>
         <p class="colony">2/49 DEFENCE COLONY KANKARBAGH </br> PATNA-800020</p>
         <p>hr@bharatdevice.com</p>
       </div>
-      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+      <div class="explore" style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Explore</h1>
         <p>Enter your email address</p>
         <input style="padding: 12px 32px;border-radius: 10px;" type="email" placeholder="Your email for updates">
         <button style="padding: 12px 22px;background-color: rgb(101, 101, 222);border-radius:25px;font-size: 16px;
   font-weight: 600;">Subscrible for latest updates</button>
-        <p style="position: absolute;bottom: 30px;left: 150px;">© 2025. All rights reserved.</p>
+        <p style="position: absolute;bottom: -60px;left: 50px;">© 2025. All rights reserved.</p>
       </div>
     </div>
   </div>
@@ -394,5 +436,131 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+   gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".nav-page h1", {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    ease: "power3.out",
+  });
+
+  gsap.from(".nav-page p", {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    ease: "power3.out",
+    delay: 0.5,
+  });
+   gsap.from("div[style*='background-color: #E6F7FF']:nth-child(1)", {
+    duration: 1,
+    x: -100,
+    opacity: 0,
+    ease: "power3.out",
+  });
+
+  gsap.from("div[style*='background-color: #E6F7FF']:nth-child(2)", {
+    duration: 1,
+    x: 100,
+    opacity: 0,
+    ease: "power3.out",
+    delay: 0.3,
+  });
+  gsap.from(".product-page2-div h1, .product-page2-div p", {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power3.out",
+  });
+
+  // Animate left column images sliding in from left
+  gsap.from(".product-page2-img > div:first-child img", {
+    duration: 1,
+    x: -100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 1,
+    ease: "power3.out",
+  });
+
+  // Animate center large image scaling in
+  gsap.from(".product-page2-img3 img", {
+    duration: 1.5,
+    scale: 0.8,
+    opacity: 0,
+    delay: 1.5,
+    ease: "power3.out",
+  });
+
+  // Animate right column images sliding in from right
+  gsap.from(".product-page2-img > div:last-child img", {
+    duration: 1,
+    x: 100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 1.8,
+    ease: "power3.out",
+  });
+  gsap.from("#star-rating", {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    ease: "power3.out",
+  });
+
+  gsap.from("#star-text", {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    delay: 0.5,
+    ease: "power3.out",
+  });
+
+  gsap.from("#star-img", {
+    duration: 1,
+    scale: 0,
+    opacity: 0,
+    delay: 1,
+    ease: "elastic.out(1, 0.5)",
+  });
+
+  gsap.from("#star-name", {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    delay: 1.5,
+    ease: "power3.out",
+  });
+   gsap.from(".products-container > div", {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.4,
+    ease: "power3.out",
+  });
+
+  gsap.from(".products-container > div h1", {
+    duration: 1,
+    x: -100,
+    opacity: 0,
+    stagger: 0.4,
+    delay: 0.5,
+    ease: "power3.out",
+  });
+
+  gsap.from(".products-container > div p, .products-container > div input, .products-container > div button", {
+    duration: 1,
+    x: 100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 1,
+    ease: "power3.out",
+  });
+  
+  
+</script>
 
 </html>

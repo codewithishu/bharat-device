@@ -2,264 +2,274 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <style>
-    html,
+  
     body {
-        overflow-x: hidden;
+      font-family: sans-serif;
+      overflow-x: hidden;
     }
 
-    .blog-page2 {
-        background-image: url("https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=360 360w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=720 720w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=945 945w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1080 1080w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1440 1440w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=2880 2880w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1920 1920w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=3840 3840w");
-        background-size: cover;
-        object-fit: cover;
-        height: 90vh;
-        width: 100vw;
-        margin-top: -160px;
-        padding: 12px 32px;
+  .blog-page2 {
+    background-image: url("https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=360 360w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=720 720w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=945 945w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1080 1080w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1440 1440w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=2880 2880w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=1920 1920w,https://images.unsplash.com/photo-1668025627798-50538cb349db?auto=format&fit=crop&w=3840 3840w");
+    background-size: cover;
+    object-fit: cover;
+    height: 90vh;
+    width: 100vw;
+    margin-top: -160px;
+    padding: 12px 32px;
 
-    }
-    .header {
-  padding: 0 4.8rem;
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e7f5ff;
-}
-.header .logo {
-  height: 3rem;
-  width: 3rem;
-}
-  .navbar-list {
-  display: flex;
-  gap: 4.8rem;
-  list-style: none;
-}
-
-.navbar-link:link,
-.navbar-link:visited {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #212529;
-  transition: all 0.3s;
-}
-
-.navbar-link:hover,
-.navbar-link:active {
-  color: #364fc7;
-}
-
-.mobile-navbar-btn {
-  display: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.mobile-nav-icon {
-  width: 2rem;
-  height: 2rem;
-  color: #212529;
-}
-
-.mobile-nav-icon[name="close-outline"] {
-  display: none;
-}
-
-    /* Mobile Phones */
-   @media (max-width: 768px){
-     .header .logo {
-    width: 40%;
   }
+
+  .header {
+      position:fixed;
+      top: 0;
+      z-index: 100;
+      background-color: #e7f5ff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .header img {
+      height: 50px;
+    }
+
+  .navbar-list {
+    
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+  }
+
+  .navbar-link:link,
+  .navbar-link:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #212529;
+    transition: all 0.3s;
+  }
+
+  .navbar-link:hover,
+  .navbar-link:active {
+    color: #364fc7;
+  }
+
+  .mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-nav-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #212529;
+  }
+
+  .mobile-nav-icon[name="close-outline"] {
+    display: none;
+  }
+
+  /* Mobile Phones */
+  @media (max-width: 768px) {
+    .header .logo {
+      width: 40%;
+    }
+
     .mobile-navbar-btn {
       position: relative;
       right: 30px !important;
       margin-top: 2px;
-     margin-right: 10px !important;
-    display: block;
-    z-index: 999;
-    border: 3px solid #212529;
-    color: #212529;
-  }
-  .navbar {
-    /* display: none; */
-    width: 100%;
-    height: 100vh;
-    background: #e7f5ff;
-    position: absolute;
-    top: 0;
-    left: 0;
+      margin-right: 10px !important;
+      display: block;
+      z-index: 999;
+      border: 3px solid #212529;
+      color: #212529;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .navbar {
+      /* display: none; */
+      width: 100%;
+      height: 100vh;
+      background: #e7f5ff;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
 
-    /* to get the tranisition  */
-    transform: translateX(100%);
-    transition: all 0.5s linear;
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  .navbar-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .active .navbar {
-    transform: translateX(-10%);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
-  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
-    display: block;
-  }
-
-  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
-    display: none;
-  }
-    .header {
-    position: relative;
-    z-index: 2;
-  }
-
-  
-    .blog-page1 {
-    height: auto !important;
-    width: 100vw !important;
-  }
-
-  .blog-page1 img{
-     width: 40vw !important;
-    height: auto !important;
-    margin-top: 20px !important;
-    margin-right: 0 !important;
-  }
-
-  .address{
-   
-    position: relative;
-    right: 35px !important;
-  }
-  
-  .blog-page1 > div:last-child {
-    margin-left: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  .blog-page1 > div:last-child img {
-    width: 90vw !important;
-    height: auto !important;
-    margin-top: 20px !important;
-  }
-  .blog-page2{
-   margin-top: 5% !important;
-  }
-   .blog-page2 > div:nth-child(2) {
-    width: 50vw !important;
-    margin-left: 50px !important;
-    margin-right: auto !important;
-    padding: 20px 20px !important;
-  }
-
-  .blog-page2 h1 {
-    font-size: 32px !important;
-    position: relative;
-    right: 35px !important;
-  }
-
-  .blog-page2 p {
-    font-size: 18px !important;
-    text-align: left !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    
+      display: flex;
+      justify-content: center;
+      align-items: center;
       
-      white-space: normal !important;
-     width: 70vw !important;
+
+      /* to get the tranisition  */
+      transform: translateX(100%);
+      transition: all 0.5s linear;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .navbar-list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .active .navbar {
+      transform: translateX(-10%);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+      display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+      display: none;
+    }
+
+    .header {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    .blog-page1 {
+      height: auto !important;
+      width: 100vw !important;
+    }
+
+    .blog-page1 img {
+      width: 40vw !important;
+      height: auto !important;
+      margin-top: 20px !important;
+      margin-right: 0 !important;
+    }
+
     
-   
-  }
 
-  .blog-page2 input {
-    padding: 12px 0 !important;
-    width: 50vw !important;
-  }
+    .blog-page1>div:last-child {
+      margin-left: 0 !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
 
-  .blog-page2 button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  
-    font-size: 16px !important;
-  }
-  .page6 {
-    height: 100vh !important;
-    padding: 32px 16px !important;
-    padding-right: 30px !important;
-    margin-right: 20px !important;
-    position: relative;
-    right: 35px !important;
-  }
+    .blog-page1>div:last-child img {
+      width: 90vw !important;
+      height: auto !important;
+      margin-top: 20px !important;
+    }
+    #message{
+      padding: 12px 6px !important;
+    }
+    .blog-page2 {
+      margin-top: 5% !important;
+    }
 
-  .page6 > div {
-    flex-direction: column !important;
-    padding: 20px !important;
-    gap: 40px !important;
-    align-items: center !important;
-    text-align: center !important;
-    font-size: 15px !important;
-  }
+    .blog-page2>div:nth-child(2) {
+      width: 60vw !important;
+      margin-left: 15px !important;
+      margin-right: 50px !important;
+      padding: 20px 20px !important;
+    }
 
-  .page6 input {
-    width: 50vw !important;
-    margin: 0 auto !important;
-  }
+    .blog-page2 h1 {
+      font-size: 32px !important;
+      position: relative;
+      right: 35px !important;
+    }
 
-  .page6 button {
-    margin-top: 10px !important;
-  }
-
-  .page6 p[style*="position: absolute"] {
-    position: static !important;
-    margin-top: 20px !important;
-    font-size: 13px !important;
-  }
-   }
+    .blog-page2 p {
+      font-size: 18px !important;
+      text-align: left !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
 
 
+      white-space: normal !important;
+      width: 70vw !important;
+
+
+    }
+
+    .blog-page2 input {
+      padding: 12px 0 !important;
+      width: 50vw !important;
+    }
+
+    .blog-page2 button {
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      font-size: 16px !important;
+    }
+
+    .page6 {
+      height: 100vh !important;
+      padding: 32px 16px !important;
+      padding-right: 30px !important;
+      margin-right: 20px !important;
+      position: relative;
+      right: 35px !important;
+    }
+
+    .page6>div {
+      flex-direction: column !important;
+      padding: 20px !important;
+      gap: 40px !important;
+      align-items: center !important;
+      text-align: center !important;
+      font-size: 15px !important;
+    }
+
+    .page6 input {
+      width: 50vw !important;
+      margin: 0 auto !important;
+    }
+
+    .page6 button {
+      margin-top: 10px !important;
+    }
+
+    .page6 p[style*="position: absolute"] {
+      position: static !important;
+      margin-top: 20px !important;
+      font-size: 13px !important;
+    }
+  }
 </style>
 
 <body>
-    <div class="blog-page1" style="height: 100vh;width: 100vw;">
-        <div class="header" style="position: sticky ; padding: 15px;top: 0;width: 100%; display: flex; justify-content:space-around; background-color: #fff;"> 
-           <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;" src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
-            
-           <nav class="navbar">
+  <div class="blog-page1" style="height: 100vh;width: 100vw">
+    <div class="header"
+      style="  padding: 15px;width: 100%; display: flex; justify-content:space-around; background-color: #fff;">
+      <img class="logo" style="height:15%; width: 15%; text-align: center;margin-top: 15px;"
+        src="https://assets.zyrosite.com/YrDWL42RZDc8jKWA/ai-logo-YleWL4jJKriZBEWJ.svg " alt="">
+
+      <nav class="navbar">
         <ul class="navbar-list">
           <li><a class="navbar-link" href="index.html">Home</a></li>
           <li><a class="navbar-link" href="about.html">About</a></li>
           <li><a class="navbar-link" href="products.html">Products</a></li>
           <li><a class="navbar-link" href="blog.html">Blog</a></li>
           <li>
-            <a
-              class="navbar-link"
-              href="contact.html"
-              target="_blank"
-              >Contact</a
-            >
+            <a class="navbar-link" href="contact.html" target="_blank">Contact</a>
           </li>
         </ul>
       </nav>
@@ -269,65 +279,119 @@
         <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
       </div>
 
-        </div>
-        <div style="margin-left: 25%;">
-            <img style="height: 50vh;width: 50vw;margin-top: -30px;"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1624,h=688,fit=crop/YrDWL42RZDc8jKWA/smoke_and_fire_detector-picsart-aiimageenhancer-m7V3ED6jMrSqpbXz.jpeg"
-                alt="">
-        </div>
     </div>
-    <div class="blog-page2 ">
-        <div style="margin-top: 5%;">
-            <h1 style="text-align: center;font-size: 60px;color: #fff;">Get in Touch</h1>
-            <p style="text-align: center;font-size: 18px;color: #fff;margin-top: -20px;">Reach out to us for inquiries about Indian
-                tech</br> innovations.</p>
-        </div>
+    <div class="smoke-img" style="margin-left: 25%;">
+      <img style="height: 50vh;width: 50vw;margin-top: -30px;"
+        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1624,h=688,fit=crop/YrDWL42RZDc8jKWA/smoke_and_fire_detector-picsart-aiimageenhancer-m7V3ED6jMrSqpbXz.jpeg"
+        alt="">
+    </div>
+  </div>
+  <div class="blog-page2 ">
+    <div style="margin-top: 5%;">
+      <h1 style="text-align: center;font-size: 60px;color: #fff;">Get in Touch</h1>
+      <p style="text-align: center;font-size: 18px;color: #fff;margin-top: -20px;">Reach out to us for inquiries about
+        Indian
+        tech</br> innovations.</p>
+    </div>
 
-        <div class="address"
-            style="z-index: 2;background-color: #fff;width: 30vw;padding: 22px 42px;margin-left: 35%;border-radius: 20px;">
-            <p>Your First Name</p>
-            <input style="padding: 12px 152px;" type="text" placeholder="Enter Your First Name">
-            <p>Your Email Address*</p>
-            <input style="padding: 12px 152px;" type="email" placeholder="Enter your email Address">
-            <p>Your Message*</p>
-            <input style="padding: 12px 152px;" type="text" placeholder="Enter your message">
-            <div>
-                <button style="padding: 12px 32px;background-color: rgb(101, 101, 222);border-radius:25px;
+    <div class="address"
+      style="z-index: 2;background-color: #fff;width: 30vw;padding: 22px 42px;margin-left: 35%;border-radius: 20px;margin-bottom: 60px;">
+      <p>Your First Name</p>
+      <input id="firstName"  style="padding: 12px 152px;" type="text" placeholder="Enter Your First Name">
+      <p>Your Email Address*</p>
+      <input id="email" style="padding: 12px 152px;" type="email" placeholder="Enter your email Address">
+      <p>Your Message*</p>
+      <textarea id="message" id="message" placeholder="Type your message here..."
+            style="padding: 12px;width: 100%; border-radius: 10px; border: 1px solid #ccc; resize: vertical; min-height: 100px;">
+  </textarea>
+      <div>
+        <button style="padding: 12px 32px;background-color: rgb(101, 101, 222);border-radius:25px;
                 font-size: 16px;
   font-weight: 600; margin-top: 20px;color: #fff;margin-bottom: 10px; margin-left: 25%;">Submit Your Enquiry</button>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="page6" style="height: 50vh;width: 100vw;background-color:#102A43; margin-top: 40px; padding: 32px 32px;color: #fff;position: relative;">
+  <div class="page6"
+    style="height: 50vh;width: 100vw;background-color:#102A43; margin-top: 10px; padding: 32px 32px;color: #fff;position: relative;">
     <div style="display: flex; justify-content: space-around;align-items: center;padding: 62px 62px;">
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Innovate</h1>
         <p>Showcasing India's tech, gadgets, and </br>solutions.</p>
-    </div>
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+      </div>
+      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Connect</h1>
         <p>2/49 DEFENCE COLONY KANKARBAGH </br> PATNA-800020</p>
         <p>hr@bharatdevice.com</p>
-    </div>
-    <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
+      </div>
+      <div style="display: flex;flex-direction: column;justify-content: flex-end;gap: 10px;">
         <h1>Explore</h1>
         <p>Enter your email address</p>
         <input style="padding: 12px 32px;border-radius: 10px;" type="email" placeholder="Your email for updates">
         <button style="padding: 12px 22px;background-color: rgb(101, 101, 222);border-radius:25px;font-size: 16px;
   font-weight: 600;">Subscrible for latest updates</button>
-  <p style="position: absolute;bottom: 30px;left: 150px;">© 2025. All rights reserved.</p>
+        <p style="position: absolute;bottom: -60px;left: 50px;">© 2025. All rights reserved.</p>
+      </div>
     </div>
-</div>
-    </div>
+  </div>
 </body>
-<script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+   gsap.registerPlugin(ScrollTrigger);
+   
+gsap.from(".blog-page2 h1, .blog-page2 p", {
+    scrollTrigger: {
+      trigger: ".blog-page2",
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+    y: -80,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    stagger: 0.2
+  });
+
+  // Animate the address box
+  gsap.from(".address", {
+    scrollTrigger: {
+      trigger: ".address",
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+    y: -80,
+    opacity: 0,
+    duration: 1.4,
+    ease: "power4.out",
+  });
+  gsap.from(".page6", {
+  scrollTrigger: {
+    trigger: ".page6",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+  y: -80,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power4.out"
+});
+
+// Animate each inner block with slight delay
+gsap.from(".page6 div > div", {
+  scrollTrigger: {
+    trigger: ".page6",
+    start: "top 85%",
+  },
+  y: -60,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.2
+});
+</script>
+
 </html>
