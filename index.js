@@ -1,9 +1,11 @@
 const mobile_nav = document.querySelector(".mobile-navbar-btn");
 const nav_header = document.querySelector(".header");
+const allpage = document.querySelector(".all-page")
 
 const toggleNavbar = () => {
   // alert("Plz Subscribe ");
   nav_header.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 };
 
 mobile_nav.addEventListener("click", () => toggleNavbar());

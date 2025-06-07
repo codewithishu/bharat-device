@@ -114,6 +114,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+   
   }
 
   .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
@@ -125,7 +126,7 @@
   }
     .header {
     position: relative;
-    z-index: 2;
+    z-index: 1000;
   }
   .page1 img{
      width: 40vw !important;
@@ -134,7 +135,10 @@
     margin-right: 0 !important;
   }
   
-      
+    body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}  
     
    
   .section{
